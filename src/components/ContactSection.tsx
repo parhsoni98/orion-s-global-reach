@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { z } from "zod";
-import { Mail, Phone, MapPin } from "lucide-react";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const contactSchema = z.object({
@@ -48,7 +48,6 @@ const ContactSection = () => {
     }
     setSending(true);
 
-    // FormSubmit.co integration – replace email below with actual company email
     try {
       const res = await fetch("https://formsubmit.co/ajax/info@oriontradingsolutions.com", {
         method: "POST",
@@ -65,7 +64,7 @@ const ContactSection = () => {
       });
 
       if (res.ok) {
-        toast({ title: "Message Sent!", description: "We'll get back to you shortly." });
+        toast({ title: "Message Sent!", description: "We'll get back to you within 24 hours." });
         setForm(initialForm);
       } else {
         throw new Error("Failed");
@@ -89,7 +88,11 @@ const ContactSection = () => {
       <div className="container mx-auto">
         <div className="text-center mb-16">
           <p className="text-sm font-semibold uppercase tracking-widest text-secondary mb-3">Get In Touch</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-foreground">Contact Us</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Contact Us</h2>
+          <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            Have a question or need a custom quote? Fill out the form below and our trade specialists
+            will respond within 24 hours.
+          </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12">
@@ -97,22 +100,39 @@ const ContactSection = () => {
           <div className="lg:col-span-2 space-y-8">
             <div>
               <h3 className="text-xl font-bold text-foreground mb-4 font-sans">Orion Trading Solutions</h3>
+              <p className="text-muted-foreground leading-relaxed mb-2">
+                Ready to expand your global reach? Contact us for a tailored trade solution that fits your
+                business needs and budget.
+              </p>
               <p className="text-muted-foreground leading-relaxed">
-                Ready to expand your global reach? Contact us for a tailored trade solution.
+                Whether you're exploring new markets or optimizing existing supply chains, our team is
+                here to help every step of the way.
               </p>
             </div>
             <div className="space-y-4">
               <div className="flex items-center gap-3">
-                <Mail className="w-5 h-5 text-secondary" />
+                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                  <Mail className="w-5 h-5 text-secondary" />
+                </div>
                 <span className="text-foreground">info@oriontradingsolutions.com</span>
               </div>
               <div className="flex items-center gap-3">
-                <Phone className="w-5 h-5 text-secondary" />
+                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                  <Phone className="w-5 h-5 text-secondary" />
+                </div>
                 <span className="text-foreground">+1 (555) 123-4567</span>
               </div>
               <div className="flex items-center gap-3">
-                <MapPin className="w-5 h-5 text-secondary" />
-                <span className="text-foreground">123 Trade Avenue, New York, NY</span>
+                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                  <MapPin className="w-5 h-5 text-secondary" />
+                </div>
+                <span className="text-foreground">123 Trade Avenue, New York, NY 10001</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
+                  <Clock className="w-5 h-5 text-secondary" />
+                </div>
+                <span className="text-foreground">Mon – Fri: 8:00 AM – 6:00 PM EST</span>
               </div>
             </div>
           </div>
@@ -145,21 +165,25 @@ const ContactSection = () => {
                 <option value="Import">Import</option>
                 <option value="Export">Export</option>
                 <option value="Logistics">Logistics</option>
+                <option value="Global Sourcing">Global Sourcing</option>
                 <option value="Other">Other</option>
               </select>
               {errors.service && <p className="text-destructive text-xs mt-1">{errors.service}</p>}
             </div>
             <div>
-              <textarea name="message" value={form.message} onChange={handleChange} placeholder="Your Message *" rows={5} className={inputClass} />
+              <textarea name="message" value={form.message} onChange={handleChange} placeholder="Tell us about your trade requirements... *" rows={5} className={inputClass} />
               {errors.message && <p className="text-destructive text-xs mt-1">{errors.message}</p>}
             </div>
             <button
               type="submit"
               disabled={sending}
-              className="w-full py-3 rounded-md bg-accent text-accent-foreground font-semibold text-lg hover:opacity-90 transition-opacity disabled:opacity-60"
+              className="w-full py-3 rounded-md bg-primary text-primary-foreground font-semibold text-lg hover:opacity-90 transition-opacity disabled:opacity-60"
             >
               {sending ? "Sending..." : "Send Message"}
             </button>
+            <p className="text-xs text-muted-foreground text-center">
+              By submitting, you agree to our privacy policy. We'll never share your information.
+            </p>
           </form>
         </div>
       </div>
