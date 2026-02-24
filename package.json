@@ -85,5 +85,17 @@
     "typescript-eslint": "^8.38.0",
     "vite": "^5.4.19",
     "vitest": "^3.2.4"
-  }
+  },
+  "description": "## Project info",
+  "main": "eslint.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/parhsoni98/orion-s-global-reach.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/parhsoni98/orion-s-global-reach/issues"
+  },
+  "homepage": "https://github.com/parhsoni98/orion-s-global-reach#readme"
 }
