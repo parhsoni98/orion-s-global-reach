@@ -1,11 +1,3 @@
-import { Globe, Shield, TrendingUp, Users } from "lucide-react";
-
-const stats = [
-  { icon: Globe, value: "50+", label: "Countries Served" },
-  { icon: Shield, value: "15+", label: "Years Experience" },
-  { icon: TrendingUp, value: "10K+", label: "Shipments Delivered" },
-  { icon: Users, value: "500+", label: "Active Clients" },
-];
 
 const AboutSection = () => (
   <section id="about" className="section-padding bg-background">
@@ -22,7 +14,7 @@ const AboutSection = () => (
             so businesses can focus on growth.
           </p>
           <p className="text-muted-foreground text-lg leading-relaxed mb-4">
-            Founded in 2009, we've built lasting relationships with suppliers, manufacturers, and distributors
+            Founded in 2026, we've built lasting relationships with suppliers, manufacturers, and distributors
             across six continents. Our team of seasoned trade professionals ensures that every shipment—whether
             a single container or a full fleet—arrives on time and within budget.
           </p>
@@ -44,18 +36,6 @@ const AboutSection = () => (
           <div className="absolute -bottom-4 -right-4 w-28 h-28 rounded-xl bg-secondary/15 -z-10" />
           <div className="absolute -top-4 -left-4 w-20 h-20 rounded-xl bg-primary/10 -z-10" />
         </div>
-      </div>
-
-      <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
-        {stats.map((s) => (
-          <div key={s.label} className="flex flex-col items-center text-center p-8 rounded-xl bg-card border border-border shadow-sm hover:shadow-md transition-shadow">
-            <div className="w-14 h-14 rounded-full bg-teal/10 flex items-center justify-center mb-4">
-              <s.icon className="w-7 h-7 text-secondary" />
-            </div>
-            <span className="text-4xl font-bold text-primary">{s.value}</span>
-            <span className="text-muted-foreground mt-1">{s.label}</span>
-          </div>
-        ))}
       </div>
     </div>
   </section>

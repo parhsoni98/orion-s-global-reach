@@ -15,9 +15,7 @@ const HeroSection = () => (
     <div className="absolute inset-0 gradient-navy opacity-85" />
 
     <div className="relative z-10 container mx-auto px-4 text-center pt-20">
-      <div className="inline-block px-4 py-1.5 rounded-full border border-primary-foreground/20 bg-primary-foreground/5 mb-8 animate-fade-in">
-        <span className="text-sm font-medium text-teal-light">Trusted by 500+ businesses worldwide</span>
-      </div>
+      
 
       <h1 className="text-4xl sm:text-5xl lg:text-7xl font-extrabold text-primary-foreground mb-6 animate-fade-in-up leading-tight">
         Moving the World
@@ -38,7 +36,6 @@ const HeroSection = () => (
 
       {/* Trust badges */}
       <div className="mt-16 flex flex-wrap items-center justify-center gap-8 text-primary-foreground/50 text-sm animate-fade-in" style={{ animationDelay: "0.6s" }}>
-        <span className="flex items-center gap-2">✓ ISO 9001 Certified</span>
         <span className="flex items-center gap-2">✓ Licensed Customs Broker</span>
         <span className="flex items-center gap-2">✓ 50+ Countries</span>
         <span className="flex items-center gap-2">✓ 24/7 Support</span>

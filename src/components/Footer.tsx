@@ -6,9 +6,9 @@ const Footer = () => (
     <div className="container mx-auto">
       <div className="grid md:grid-cols-4 gap-10 mb-10">
         <div className="md:col-span-2">
-          <img src={logo} alt="Orion Trading Solutions" className="h-14 mb-4 brightness-0 invert" />
+          <img src={logo} alt="Orion Trading Solutions" className="h-14 mb-4 brightness-100 " />
           <p className="text-primary-foreground/60 text-sm leading-relaxed max-w-md">
-            Bridging markets worldwide with reliable trade and logistics solutions since 2009.
+            Bridging markets worldwide with reliable trade and logistics solutions since 2026.
             Orion Trading Solutions is committed to empowering businesses with seamless international
             commerce services they can trust.
           </p>
@@ -35,8 +35,23 @@ const Footer = () => (
             ))}
           </div>
           <h4 className="text-primary-foreground font-semibold mb-2">Contact</h4>
-          <p className="text-primary-foreground/60 text-sm">info@oriontradingsolutions.com</p>
-          <p className="text-primary-foreground/60 text-sm">+1 (555) 123-4567</p>
+          <div className="space-y-2 text-sm">
+            <p className="text-primary-foreground/60">
+              <a href="mailto:oriontradingsolutionsco@gmail.com" className="hover:text-primary-foreground transition-colors">
+                oriontradingsolutionsco@gmail.com
+              </a>
+            </p>
+            <p className="text-primary-foreground/60">
+              <a 
+                href="https://www.google.com/maps/place/A%2F209,+Pushpak+corner,+Naroda,+Ahmedabad,+Gujarat+382330,+India" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="hover:text-primary-foreground transition-colors"
+              >
+                A/209, Pushpak corner, Naroda, Ahmedabad, Gujarat, India 382330
+              </a>
+            </p>
+          </div>
         </div>
       </div>
       <div className="border-t border-primary-foreground/15 pt-6 text-center text-primary-foreground/40 text-sm">

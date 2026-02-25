@@ -1,3 +1,4 @@
+import emailjs from "@emailjs/browser";
 import { useState } from "react";
 import { z } from "zod";
 import { Mail, Phone, MapPin, Clock } from "lucide-react";
@@ -114,25 +115,40 @@ const ContactSection = () => {
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
                   <Mail className="w-5 h-5 text-secondary" />
                 </div>
-                <span className="text-foreground">info@oriontradingsolutions.com</span>
+                <a 
+                  href="https://mail.google.com/mail/u/0/?view=cm&fs=1&to=oriontradingsolutionsco@gmail.com&su=Inquiry%20from%20Website&body=Hello%20Orion%20Trading%20Solutions,%0A%0AI%20am%20interested%20in%20learning%20more%20about%20your%20services.%0A%0APlease%20provide%20information%20about%20how%20we%20can%20work%20together.%0A%0ABest%20regards"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-secondary hover:underline transition-colors duration-200"
+                >
+                  oriontradingsolutionsco@gmail.com
+                </a>
               </div>
-              <div className="flex items-center gap-3">
+              {/* <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
                   <Phone className="w-5 h-5 text-secondary" />
                 </div>
                 <span className="text-foreground">+1 (555) 123-4567</span>
-              </div>
+              </div> */}
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
                   <MapPin className="w-5 h-5 text-secondary" />
                 </div>
-                <span className="text-foreground">123 Trade Avenue, New York, NY 10001</span>
+                <a 
+                  href="https://www.google.com/maps/place/A%2F209,+Pushpak+corner,+Naroda,+Ahmedabad,+Gujarat+382330,+India" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="text-foreground hover:text-secondary hover:underline transition-colors duration-200"
+                >
+                  A/209, Pushpak corner, Naroda, Ahmedabad, Gujarat, India 382330
+                </a>
               </div>
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-lg bg-secondary/10 flex items-center justify-center">
                   <Clock className="w-5 h-5 text-secondary" />
                 </div>
-                <span className="text-foreground">Mon – Fri: 8:00 AM – 6:00 PM EST</span>
+                {/* <span className="text-foreground">Mon – Fri: 8:00 AM – 6:00 PM EST</span> */}
+                <span className="text-foreground">Mon – Fri: 8:00 AM – 6:00 PM IST</span>
               </div>
             </div>
           </div>

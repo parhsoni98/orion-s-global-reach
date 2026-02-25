@@ -4,7 +4,7 @@ const reasons = [
   { text: "Extensive global network across 50+ countries", detail: "Partnerships with verified agents in every major trade corridor" },
   { text: "End-to-end supply chain management", detail: "From factory floor to your warehouse—fully managed" },
   { text: "Dedicated compliance and customs expertise", detail: "Navigate tariffs, sanctions, and regulations with confidence" },
-  { text: "Real-time shipment tracking and reporting", detail: "Full visibility with live dashboards and proactive alerts" },
+  { text: "Shipment Status Updates & Reporting", detail: "Regular updates at key transit milestones with clear status reports" },
   { text: "Competitive pricing with transparent costs", detail: "No hidden fees—clear quotes with detailed breakdowns" },
   { text: "Personalized service with dedicated account managers", detail: "A single point of contact who understands your business" },
 ];
