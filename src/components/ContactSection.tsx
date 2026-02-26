@@ -135,7 +135,7 @@ const ContactSection = () => {
                   <MapPin className="w-5 h-5 text-secondary" />
                 </div>
                 <a 
-                  href="https://www.google.com/maps/place/A%2F209,+Pushpak+corner,+Naroda,+Ahmedabad,+Gujarat+382330,+India" 
+                  href="https://maps.app.goo.gl/1oKT7v8K4yRi41Sy5?g_st=ic" 
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="text-foreground hover:text-secondary hover:underline transition-colors duration-200"
